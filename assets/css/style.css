@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+/* common
+---------------------------------------------------*/
+img {
+	max-width: 100%;
+	height: auto;
+}
+h1 {
+	text-align: center;
+}
+main {
+	text-align: center;
+	padding: 1em;
+}
+button {
+	cursor: pointer;
+}
+#wrapper {
+	max-width: 800px;
+	margin-inline: auto;
+}
+
+/* Accordion
+---------------------------------------------------*/
+.accordion {
+	dt,
+	dd {
+		padding: 0.2em 1em;
+	}
+	dt {
+		background: #bbb;
+		cursor: pointer;
+	}
+	dd {
+		background: #eee;
+	}
+}
+
+/* slideshow
+---------------------------------------------------*/
+#slideShow {
+	position: relative;
+	padding-top: 62.5%;
+}
+#slideShow li {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+/* photo viewer
+---------------------------------------------------*/
+.thumb {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 1em;
+}
+
+/* tab menu
+---------------------------------------------------*/
+.tab {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	gap: 1px;
+}
+.tab li {
+	background: #ccc;
+	padding: 5px 25px;
+	cursor: pointer;
+}
+.tab li:hover {
+	background: #ddd;
+}
+.tab .active {
+	background: #eee;
+}
+.panel section {
+	background: #eee;
+	padding: 20px;
+}
+
+/* date
+---------------------------------------------------*/
+#nowTime {
+	font-size: 1.5rem;
+}
+#info,
+#countdown,
+#countdown span {
+	font-size: 1.25em;
+}
+#countdown span {
+	font-weight: bold;
+	color: #f00;
+}
+
+/* mole game
+---------------------------------------------------*/
+.container {
+	text-align: center;
+	max-width: 600px;
+	margin: 2em auto;
+	padding: 2em;
+	background-color: #eaffdc;
+}
+#playArea img {
+	margin: 0.5em;
+	cursor: pointer;
+	transition: transform 0.1s;
+	cursor: pointer;
+	user-select: none;
+}
+#playArea img:active {
+	transform: scale(0.9);
+}
+.console {
+	margin-top: 1em;
+}
+

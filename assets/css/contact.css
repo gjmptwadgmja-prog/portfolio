@@ -1,0 +1,337 @@
+@charset "utf-8";
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html {
+	overflow-x: hidden;
+}
+body {
+    color: #333;
+}
+#contact {
+    line-height: 1.8;
+    background: #fff;
+}
+#contact main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: "Inter","Noto Sans JP",sans-serif; 
+}
+#contact main h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    letter-spacing: 0.05em;
+}
+#contact main p {
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 50px;
+    text-align: center;
+}
+#container {
+    background: #fff;
+        max-width: 960px;
+        min-width: 320px;
+        margin: 0 auto;
+}
+header {
+    display: flex;
+    padding: 0 6% 0 1%;
+    background: #fff;/*あとでかえる*/
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #333;
+}
+header .logo {
+    border-right: 2px solid #333; 
+    padding-right: 10px;          
+    padding: 10px 20px 10px 0;
+}
+header .logo img {
+    width: 240px;
+}
+header nav {
+    display: flex;
+}
+header nav ul a {
+    text-decoration: none;
+    color: #333;
+}
+header ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    justify-content: flex-end;
+}
+header ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;      
+    padding: 0 20px;     
+    white-space: nowrap;
+}
+header ul li:last-child {
+    padding-right: 10px;
+}
+#home footer.menu4 a,
+#about footer .menu2 a,
+#works footer .menu1 a,
+#contact footer .menu3 a,
+footer ul li a:hover {
+    text-decoration: underline;
+    color: #333;
+    font-weight: bold;
+}
+#home header.menu4 a,
+#about header .menu2 a,
+#works header .menu1 a,
+#contact header .menu3 a,
+header ul li a:hover {
+    text-decoration: underline;
+    color: #333;
+    font-weight: bold;
+}
+/*ここから下はトップページのｃｓｓ*/
+/*
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0 40px 4%;
+    background: #F5F5F5;
+}
+.hero-content {
+    flex-shrink: 0;
+    width: 35%;
+}
+.hero-catch {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.8;
+}
+.hero-image-wrap {
+    width: 100%;
+    max-width: 840px; 
+}
+.hero-image-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.gridArea {display: grid;}
+.gridArea{
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 20px;
+}
+.gridArea dt img {
+    max-width: 100%;
+    padding: 10px 5%; 
+    height: auto;
+    display: block;
+}
+.gridArea dd {
+    margin: 0;
+    padding: 15px 5%;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+.client {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F5F5F5;
+    gap: 10px;
+    padding: 60px 0 60px 4%;
+}
+.client-text {
+    width: 40%;
+    height: auto;
+}
+.client-text h2 {
+    margin: 0 0 20px 0;
+}
+.client-text p {
+    margin-top: 5%;
+}
+.client-img {
+    width: 60%;
+    margin: 0;
+}
+.client-img img {
+    width: 100%;
+    height: auto;
+    display: block; 
+}
+.client-text .client-btn {
+    background: #DED6CC;
+    max-width: 200px;
+    margin-top: 30px;
+    transition: 0.4s;
+}
+.client-text .client-btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    text-decoration: none;
+    color:#333;
+    font-weight: bold;
+}
+.client-text .client-btn:hover {
+    background: #333;
+}
+.client-text .client-btn:hover a {
+    color: #fff;
+}
+/* フッター設定*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    background: #fff;
+    border-top: 2px solid #333;
+    padding: 60px 6% 50px 1%; 
+}
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; 
+}
+.footer-logo img {
+    display: block;
+    width: 240px;
+    height: auto;
+}
+.footer-address {
+    font-style: normal;
+    font-size: 13px;
+    color: #333;
+    line-height: 1.8;
+}
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    gap: 10px;            
+}
+.footer-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-nav ul li {
+    font-size: 16px;
+    white-space: nowrap;
+}
+.footer-nav ul li + li::before {
+    content: "|";
+    margin: 0 15px;
+    color: #333;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+.footer-bottom-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.copyright {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+}
+.top-btn {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background: #DED6CC; 
+    color: #333;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: bold;
+}
+.top-btn:hover {
+    background: #333;
+    color: #fff;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+th {
+    width: 30%;
+    padding: 30px 10px;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+    vertical-align: middle;
+}
+td {
+    text-align: left;
+}
+tr {
+    border-top: 1px dotted #999;
+    border-bottom: 1px dotted #999;
+}
+form {
+    width: 100%;
+}
+textarea {
+    height: 240px;
+    resize: vertical; 
+    line-height: 1.6;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.8em 1em;
+    font-size: 0.95rem;
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #333;
+    border-radius: 0;
+    outline: none;
+    font-weight: 600;
+}
+input[type="submit"] {
+    display: block;
+    width: 200px;
+    margin: 40px auto 0;
+    padding: 1em 0;
+    background-color: #DED6CC;
+    color: #333;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.4s;
+}
+input[type="submit"]:hover {
+    background-color: #333;
+    color: #fff;
+}
